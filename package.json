@@ -1,0 +1,28 @@
+{
+  "name": "node-react-cognito",
+  "version": "1.0.0",
+  "description": "reusable secure signin template using node, react, and AWS Cognito",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylermaran/node-react-cognito.git"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "aws",
+    "cognito"
+  ],
+  "author": "themanmaran (tyler.maran@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tylermaran/node-react-cognito/issues"
+  },
+  "homepage": "https://github.com/tylermaran/node-react-cognito#readme",
+  "dependencies": {
+    "concurrently": "^5.0.0"
+  }
+}
