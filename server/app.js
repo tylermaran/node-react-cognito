@@ -24,6 +24,7 @@ mongoose.connect(
 		'@node-react-cognito-nplux.mongodb.net/test?retryWrites=true&w=majority',
 	{
 		useNewUrlParser: true,
+		useUnifiedTopology: true
 	}
 );
 mongoose.set('useFindAndModify', false);

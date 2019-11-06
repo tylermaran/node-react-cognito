@@ -17,3 +17,7 @@ exports.get_all_users = (req, res, next) => {
 			});
 		});
 };
+
+exports.post_new_user = (req, res, next) => {
+
+}

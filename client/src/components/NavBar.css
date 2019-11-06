@@ -1,0 +1,24 @@
+.navbar {
+    height: 75px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    background-color: white;
+
+    
+	-webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  
+}
+
+.nav_content {
+    width: 100%;
+}
+
+.nav_item {
+    display: inline-block;
+    
+    width: 33%;
+    height: 100%;
+    text-align: center;
+}
