@@ -1,5 +1,6 @@
 // Importing Dependencies
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Importing Components
 
@@ -10,10 +11,18 @@ const NavBar = props => {
 	return (
 		<div className="navbar">
 			<div className="nav_content">
-				<div className="nav_item">Home</div>
-				<div className="nav_item">Users</div>
-				<div className="nav_item">Sign in</div>
-
+				<div className="nav_item">
+					{' '}
+					<Link to="/">Home</Link>
+				</div>
+				<div className="nav_item">
+					{' '}
+					<Link to="/users">Users</Link>
+				</div>
+				<div className="nav_item">
+					{' '}
+					<Link to="/signin">Sign in</Link>
+				</div>
 			</div>
 		</div>
 	);

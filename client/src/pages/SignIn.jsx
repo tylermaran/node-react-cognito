@@ -3,6 +3,7 @@ import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 // Importing Components
+import NavBar from '../components/NavBar';
 
 // Importing Styling
 import './SignIn.css';
@@ -10,7 +11,8 @@ import './SignIn.css';
 const SignIn = props => {
 	return (
 		<div className="signIn">
-			<div className="container">
+			<NavBar/>
+			<div className="container_sm">
 				<div className="header">Log in</div>
 				<div className="container_body">
 					<Form>
