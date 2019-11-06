@@ -6,11 +6,11 @@ import { Form, Button } from 'react-bootstrap';
 import NavBar from '../components/NavBar';
 
 // Importing Styling
-import './SignIn.css';
+import './LogIn.css';
 
-const SignIn = props => {
+const LogIn = props => {
 	return (
-		<div className="signIn">
+		<div className="LogIn">
 			<NavBar/>
 			<div className="container_sm">
 				<div className="header">Log in</div>
@@ -35,7 +35,7 @@ const SignIn = props => {
 							<Form.Check type="checkbox" label="Remember me" />
 						</Form.Group>
 						<Button variant="primary" type="button" className="submit_button">
-							Sign in
+							Log in
 						</Button>
 					</Form>
 				</div>
@@ -44,4 +44,4 @@ const SignIn = props => {
 	);
 };
 
-export default SignIn;
+export default LogIn;

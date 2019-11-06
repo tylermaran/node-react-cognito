@@ -1,7 +1,8 @@
 .container_sm {
-	height: 50vh;
-	width: 40%;
-    margin: 5% 0 0 30%;
+    min-height: 50vh;
+    height: auto;
+	width: 50%;
+    margin: 5% 0 0 25%;
     border-radius: 10px;
     padding: 0;
     background-color: white;

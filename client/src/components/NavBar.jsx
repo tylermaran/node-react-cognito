@@ -13,7 +13,7 @@ const NavBar = props => {
 			<div className="nav_content">
 				<div className="nav_item">
 					{' '}
-					<Link to="/">Home</Link>
+					<Link to="/">Comments</Link>
 				</div>
 				<div className="nav_item">
 					{' '}
@@ -21,7 +21,11 @@ const NavBar = props => {
 				</div>
 				<div className="nav_item">
 					{' '}
-					<Link to="/signin">Sign in</Link>
+					<Link to="/sign-up">Sign up</Link>
+				</div>
+				<div className="nav_item">
+					{' '}
+					<Link to="/log-in">Log in</Link>
 				</div>
 			</div>
 		</div>

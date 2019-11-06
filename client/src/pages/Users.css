@@ -1,5 +1,6 @@
 .container_sm {
-	height: 50vh;
+	min-height: 50vh;
+    height: auto;
 	width: 40%;
     margin: 5% 0 0 30%;
     border-radius: 10px;

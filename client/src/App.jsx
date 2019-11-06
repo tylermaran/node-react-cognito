@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Importing Components
 import Comments from './pages/Comments';
-import SignIn from './pages/SignIn';
+import LogIn from './pages/LogIn';
+import SignUp from './pages/SignUp';
 import Users from './pages/Users';
 import NoMatch from './pages/NoMatch';
 
@@ -18,9 +19,9 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={Comments} />
-          <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/log-in" component={LogIn} />
+          <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/users" component={Users} />
-
           <Route component={NoMatch} />
 
         </Switch>
