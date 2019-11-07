@@ -13,21 +13,28 @@ import NoMatch from './pages/NoMatch';
 // Importing Style
 import './App.css';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Comments} />
-          <Route exact path="/log-in" component={LogIn} />
-          <Route exact path="/sign-up" component={SignUp} />
-          <Route exact path="/users" component={Users} />
-          <Route component={NoMatch} />
+// fetch(process.env.REACT_APP_API_URL)
+// 	.then(result => {
+// 		return result.json();
+// 	})
+// 	.then(data => {
+// 		console.log(data);
+// 	});
 
-        </Switch>
-      </Router>
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<div className="App">
+			<Router>
+				<Switch>
+					<Route exact path="/" component={Comments} />
+					<Route exact path="/log-in" component={LogIn} />
+					<Route exact path="/sign-up" component={SignUp} />
+					<Route exact path="/users" component={Users} />
+					<Route component={NoMatch} />
+				</Switch>
+			</Router>
+		</div>
+	);
+};
 
 export default App;

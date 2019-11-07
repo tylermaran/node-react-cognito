@@ -6,6 +6,15 @@ const userSchema = mongoose.Schema({
 		type: String,
 		required: true,
 		timestamps: true,
+	},
+	email: {
+		type: String,
+		required: true,
+	},
+	validated: {
+		type: Boolean,
+		required: true,
+		default: false
 	}
 });
 

@@ -9,12 +9,47 @@ import NavBar from '../components/NavBar';
 import './SignUp.css';
 
 const SignUp = props => {
+	// Min 8 characters, 1 capital, 1 lowercase, 1 number
 	const requirements = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
-	const handle_signup = e => {
+	const handle_signup = form => {
+		const data = {
+			name: form.name.value,
+			email: form.email.value,
+			password: form.password1.value,
+		};
+
+		console.log(data);
+
+		fetch(process.env.REACT_APP_API_URL + 'users', {
+			headers: {
+				'Content-Type': 'application/json',
+				// 'Content-Type': 'application/x-www-form-urlencoded',
+			},
+			method: 'POST',
+			body: JSON.stringify(data),
+		})
+			.then(result => {
+				return result.json();
+			})
+			.then(data => {
+				console.log(data);
+			});
+	};
+
+	const confirm_submit = e => {
 		const form = e.currentTarget;
 
-		form.checkValidity();
+		if (form.checkValidity()) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			if (form.email.value === 'dont@contact.me') {
+				alert('Hmmm super legit looking email there >.<');
+			} else {
+				handle_signup(form);
+			}
+		}
 	};
 
 	const match_password = () => {
@@ -23,14 +58,11 @@ const SignUp = props => {
 		document.getElementById('submit_button').disabled = true;
 
 		if (requirements.test(pass1.value)) {
-			console.log('Strong');
-
 			if (pass1.value === pass2.value && pass2.value.length > 0) {
 				document.getElementById('password2').style.borderColor =
 					'#ced4da';
 				document.getElementById('submit_button').disabled = false;
 			} else {
-				console.log('passwords do not match');
 				document.getElementById('password2').style.borderColor =
 					'#E34234';
 			}
@@ -45,7 +77,7 @@ const SignUp = props => {
 			<div className="container_sm">
 				<div className="header">Sign Up</div>
 				<div className="container_body">
-					<Form onSubmit={e => handle_signup(e)}>
+					<Form onSubmit={e => confirm_submit(e)}>
 						<Form.Group controlId="name">
 							<Form.Label>Name:</Form.Label>
 							<Form.Control

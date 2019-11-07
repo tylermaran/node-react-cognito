@@ -27,7 +27,18 @@
     background-color: rgb(80, 80, 220);
 }
 
-.submit_button {
-    margin: 0 0 0 50%;
-    transform: translate(-50%, 0);
+.email, .valid {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.user_email, .email {
+    display: inline-block;
+    width: 80%;
+}
+
+.email_validated, .valid {
+    display: inline-block;
+    width: 20%;
+    text-align: right;
 }

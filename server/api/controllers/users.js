@@ -1,5 +1,5 @@
 const User = require('../models/users');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // G1: GET All
 exports.get_all_users = (req, res, next) => {
@@ -19,6 +19,7 @@ exports.get_all_users = (req, res, next) => {
 };
 
 exports.post_new_user = (req, res, next) => {
+	console.log('post request to /users');
 	console.log(req.body);
 	// Preventing Duplicate Users - search by name
 	User.findOne({

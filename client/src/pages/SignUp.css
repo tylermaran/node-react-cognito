@@ -27,7 +27,7 @@
     background-color: rgb(80, 80, 220);
 }
 
-.submit_button {
+#submit_button {
     margin: 0 0 0 50%;
     transform: translate(-50%, 0);
 }
