@@ -1,6 +1,6 @@
 .container_lg {
-	min-height: 70vh;
-    height: auto;
+	height: 70vh;
+    /* height: auto; */
 	width: 60%;
     margin: 5% 0 0 20%;
     border-radius: 10px;
@@ -13,8 +13,9 @@
 	box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
-.container_body {
-    padding: 20px;
+.comment_body {
+    padding: 0;
+    height: 95%;
 }
 
 .header {
@@ -25,4 +26,10 @@
     padding: 5px 0 0 0;
     font-size: 1.5rem;
     background-color: rgb(80, 80, 220);
+}
+
+.comment_list {
+    height: 80%;
+    overflow-y: scroll;
+    background-color: rgb(228, 228, 228);
 }

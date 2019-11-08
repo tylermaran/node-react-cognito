@@ -31,6 +31,7 @@ mongoose.set('useFindAndModify', false);
 
 // importing routes
 const userRoutes = require('./api/routes/users');
+const commentRoutes = require('./api/routes/comments');
 
 // running bodyparser - apparently no longer necessary in newer version of Express
 app.use(
@@ -42,6 +43,7 @@ app.use(bodyParser.json());
 
 // Direct towards route handler
 app.use('/users', userRoutes);
+app.use('/comments', commentRoutes);
 
 app.use('/', (req, res, next) => {
 	res.status(200).json({

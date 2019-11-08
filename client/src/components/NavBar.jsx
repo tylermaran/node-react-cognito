@@ -13,7 +13,7 @@ const NavBar = props => {
 			<div className="nav_content">
 				<div className="nav_item">
 					{' '}
-					<Link to="/">Home</Link>
+					<Link to="/">Comments</Link>
 				</div>
 				<div className="nav_item">
 					{' '}

@@ -1,8 +1,9 @@
 // Importing Dependencies
-import React from 'react';
+import React, { Component } from 'react';
 
 // Importing Components
 import NavBar from '../components/NavBar';
+import AddComment from '../components/AddComment';
 
 // Importing Styling
 import './Comments.css';
@@ -15,7 +16,7 @@ class Comments extends Component {
 		};
 	}
 	componentDidMount() {
-		fetch(process.env.REACT_APP_API_URL + 'users')
+		fetch(process.env.REACT_APP_API_URL + 'comments')
 			.then(result => {
 				return result.json();
 			})
@@ -30,17 +31,27 @@ class Comments extends Component {
 	map_comments = data => {
 		return (
 			<div className="comment_div" key={Math.random() * 9}>
-				<div className="comment_body">{data.email}</div>
+				<div className="comment_body">{data.body}</div>
 			</div>
 		);
 	};
+
+	add_comment = (comment) => {
+		console.log(comment);
+	}
+
 	render() {
 		return (
 			<div className="Comments">
 				<NavBar />
 				<div className="container_lg">
 					<div className="header">Comments</div>
-					<div className="container_body">{this.state.comments}</div>
+					<div className="comment_body">
+						<div className="comment_list">
+							{this.state.comments}
+						</div>
+						<AddComment function={this.add_comment}/>
+					</div>
 				</div>
 			</div>
 		);

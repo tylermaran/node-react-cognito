@@ -4,7 +4,12 @@
   "description": "reusable secure signin template using node, react, and AWS Cognito",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "client": "cd client && npm run start",
+		"client_prod": "cd client && npm run prod",
+		"server": "cd server && nodemon server.js",
+		"dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+		"prod": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client_prod\""
   },
   "repository": {
     "type": "git",
