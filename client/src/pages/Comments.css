@@ -30,6 +30,22 @@
 
 .comment_list {
     height: 80%;
+    padding: 0 0 10px 0;
     overflow-y: scroll;
     background-color: rgb(228, 228, 228);
+}
+
+.comment_bubble {
+    display: inline-block;
+    width: auto;
+    padding: 2px 10px 2px 10px;
+    margin: 0 10px 0 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.comment_user {
+    font-size: 12px;
+    color: rgb(80, 80, 220);
+    margin: 5px 0 -3px 15px;
 }
