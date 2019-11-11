@@ -31,3 +31,13 @@
     margin: 0 0 0 50%;
     transform: translate(-50%, 0);
 }
+
+@media only screen and (max-width: 600px) {
+    .container_sm {
+        min-height: 70vh;
+        height: auto;
+        width: 90%;
+        margin: 5% 0 0 5%;
+       
+    } 
+}
